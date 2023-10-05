@@ -23,7 +23,7 @@ classDiagram
         + subtotal : Decimal
     }
 
-    class Customer << (S, #FF7700) CPF >> {
+    class Customer {
         + cpf : String (PK)
         + name : String
         + email : String
@@ -37,6 +37,7 @@ classDiagram
     }
 
     Sale "1" *-- "*" SaleItem : contains
-    SaleItem --> Product : refers to
+    SaleItem --> Product : refers_to
     Sale --> Customer : has
+
 ```
