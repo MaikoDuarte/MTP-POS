@@ -8,7 +8,7 @@ classDiagram
     class Sale {
         + saleId : String
         + date : String
-        + totalAmount : Decimal
+        + totalAmount : BigDecimal
         + addItem(item: SaleItem)
         + getItems() : List<SaleItem>
     }
@@ -19,8 +19,8 @@ classDiagram
         + ncm : String
         + internalNumber : String
         + quantity : int
-        + unitPrice : Decimal
-        + subtotal : Decimal
+        + unitPrice : BigDecimal
+        + subtotal : BigDecimal
     }
 
     class Customer {
