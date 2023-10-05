@@ -23,8 +23,8 @@ classDiagram
         + subtotal : Decimal
     }
 
-    class Customer {
-        + cpf : String
+    class Customer << (S, #FF7700) CPF >> {
+        + cpf : String (PK)
         + name : String
         + email : String
     }
@@ -39,5 +39,4 @@ classDiagram
     Sale "1" *-- "*" SaleItem : contains
     SaleItem --> Product : refers to
     Sale --> Customer : has
-    Customer -->| cpf | Product : is owned by
 ```
